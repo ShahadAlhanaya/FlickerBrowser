@@ -5,7 +5,7 @@
     android:layout_height="180dp"
     android:layout_margin="10dp"
     android:id="@+id/card_image"
-    app:cardCornerRadius="30dp">
+    app:cardCornerRadius="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

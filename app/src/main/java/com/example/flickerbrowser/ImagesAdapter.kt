@@ -1,6 +1,7 @@
 package com.example.flickerbrowser
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,24 +38,28 @@ class ImagesAdapter(private val imagesList: ArrayList<FlickerImage>, val context
         var favorite = imagesList[position].favorite!!
 
         Glide.with(context!!).load(imgUrl).into(holder.imageView)
-        if(favorite){
+        if (favorite) {
             holder.favoriteImageView.setImageResource(R.drawable.ic_round_favorite_50)
-        }else{
+        } else {
             holder.favoriteImageView.setImageResource(R.drawable.ic_round_favorite_border_50)
         }
-        holder.imageView.setOnClickListener{
-            Toast.makeText(context,imagesList[position].id,Toast.LENGTH_SHORT).show()
+        holder.imageView.setOnClickListener {
+            val intent = Intent(context, ViewImageActivity::class.java)
+            intent.putExtra("imgUrl", imgUrl)
+            context.startActivity(intent)
         }
-        holder.favoriteImageView.setOnClickListener{
+        holder.favoriteImageView.setOnClickListener {
             favorite = !favorite
             imagesList[position].favorite = favorite
-            if(favorite){
+            if (favorite) {
                 holder.favoriteImageView.setImageResource(R.drawable.ic_round_favorite_50)
-            }else{
+            } else {
                 holder.favoriteImageView.setImageResource(R.drawable.ic_round_favorite_border_50)
             }
 
         }
+
+
     }
 
 

@@ -14,6 +14,7 @@
         <entry key="app/src/main/res/drawable/ic_round_favorite_50.xml" value="0.2609375" />
         <entry key="app/src/main/res/drawable/ic_round_search_24.xml" value="0.2609375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11" />
+        <entry key="app/src/main/res/layout/activity_view_image.xml" value="0.24479166666666666" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.12395833333333334" />
         <entry key="app/src/main/res/layout/fragment_search.xml" value="0.335" />
         <entry key="app/src/main/res/layout/fragment_search2.xml" value="0.10989583333333333" />
